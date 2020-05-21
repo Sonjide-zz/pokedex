@@ -1,17 +1,23 @@
 import React from 'react';
-import './App.css';
+import Logo from './Logo';
+import BestPokemon from './BestPokemon';
+import CaughtPokemon from './CaughtPokemon';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>hello</p>
-      </header>
+return (
+    <div>
+      <Logo appName="Pokedex" />  
+      <BestPokemon abilities={['Anticipation', 'Adaptability', 'Run-Away']}/>
+      <CaughtPokemon />
     </div>
   );
 }
 
+
+
+
 export default App;
+
+//prop format as in syllabus https://syllabus.codeyourfuture.io/react/week-1/lesson.html

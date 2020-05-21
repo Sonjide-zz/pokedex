@@ -1,10 +1,10 @@
 .App {
   text-align: center;
-  border: green 4px solid;
+  border: rgb(124, 211, 221) 4px solid;
 }
 
 p{
   margin: 4px;
   padding: 5px;
-  background-color: greenyellow;
+  background-color: rgb(255, 47, 231);
 }
