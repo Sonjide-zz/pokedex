@@ -16,13 +16,16 @@ function BestPokemonFetcher() {
         console.log(data);
       });
   }, []);
-  if (!bestPokemon) {
-    return null;
-  } else {
-    return <BestPokemon pokemon={bestPokemon} />;
-  }
+  //change this if/else statement using a ternary operator follows this structure condition ? output1 : output2
+  //   if (!bestPokemon) {
+  //     return null;
+  //   } else {
+  //     return <BestPokemon pokemon={bestPokemon} />;
+  //   }
+  // }
+  //ternary operator follows this structure condition ? output1 : output2
+  return !bestPokemon ? null : <BestPokemon pokemon={bestPokemon} />;
 }
-
 function BestPokemon(props) {
   return (
     <div>
