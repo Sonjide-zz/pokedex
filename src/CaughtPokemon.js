@@ -23,7 +23,7 @@ function CaughtPokemon() {
   return (
     <div>
       <p>
-        Caught {totalCaught} Pokemon on {date}
+        Caught {totalCaught} Pokemon on {date};
       </p>
       <button onClick={incrementPokemon}>Catch Pokemon</button>
     </div>
