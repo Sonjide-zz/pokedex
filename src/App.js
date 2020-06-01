@@ -1,22 +1,20 @@
-import React from 'react';
-import Logo from './Logo';
-import BestPokemon from './BestPokemon';
-import CaughtPokemon from './CaughtPokemon';
-
-
+import React from "react";
+import Logo from "./Logo";
+import BestPokemon from "./BestPokemon";
+import CaughtPokemon from "./CaughtPokemon";
 
 function App() {
-return (
+  function logWhenClicked() {
+    console.log("buttonElement was clicked!");
+  }
+  return (
     <div>
-      <Logo appName="Pokedex" />  
-      <BestPokemon abilities={['Anticipation', 'Adaptability', 'Run-Away']}/>
+      <Logo handleClick={logWhenClicked} appName="Pokedex" />
+      <BestPokemon abilities={["Anticipation", "Adaptability", "Run-Away"]} />
       <CaughtPokemon />
     </div>
   );
 }
-
-
-
 
 export default App;
 
