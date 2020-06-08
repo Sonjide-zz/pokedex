@@ -45,7 +45,7 @@ function CaughtPokemon(props) {
         type="text"
         placeholder="enter name of pokemon"
       ></input>
-      <button onClick={catchPokemon}>Catch Pokemon</button>
+      <button onClick={catchPokemon}>Catch Pokemons</button>
     </div>
   );
 }
