@@ -11,6 +11,8 @@ import React, { useState } from "react";
 // function Counter() {
 //   const [count, setCount] = useState(0);
 //   ...
+// 14: (STRETCH GOAL) Make sure the user cannot add a Pokemon to the caughtPokemon state if the value of pokemonNameInput state is empty.
+
 // }
 
 function CaughtPokemon(props) {
@@ -19,7 +21,12 @@ function CaughtPokemon(props) {
   const [totalCaught, setTotalCaught] = useState([]);
 
   function catchPokemon() {
-    setTotalCaught(totalCaught.concat(pokemonNameInput));
+    if (pokemonNameInput.trim() !== "") {
+      setTotalCaught(totalCaught.concat(pokemonNameInput));
+    } else {
+      //   alert("You must type your pokemon name here");
+    }
+    setPokemonNameInput("");
   }
   console.log(CaughtPokemon);
 
