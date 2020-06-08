@@ -13,19 +13,39 @@ import React, { useState } from "react";
 //   ...
 // }
 
-function CaughtPokemon() {
+function CaughtPokemon(props) {
   const date = new Date().toLocaleDateString();
-  const [totalCaught, setTotalCaught] = useState(0);
+  const [pokemonNameInput, setPokemonNameInput] = useState("");
+  const [totalCaught, setTotalCaught] = useState([]);
 
-  function incrementPokemon() {
-    setTotalCaught(totalCaught + 1);
+  function catchPokemon() {
+    setTotalCaught(totalCaught.concat(pokemonNameInput));
+  }
+  console.log(CaughtPokemon);
+
+  function handleInputChange(event) {
+    //console.log(event.target.value);
+    setPokemonNameInput(event.target.value);
+    //console.log("hello");
   }
   return (
     <div>
+      <ul>
+        {totalCaught.map((element) => (
+          <li>{element}</li>
+        ))}
+      </ul>
       <p>
-        Caught {totalCaught} Pokemon on {date};
+        Caught {totalCaught.length} {props.score} Pokemon on {props.date}
+        console.log(props.score)
       </p>
-      <button onClick={incrementPokemon}>Catch Pokemon</button>
+      <input
+        value={pokemonNameInput}
+        onChange={handleInputChange}
+        type="text"
+        placeholder="enter name of pokemon"
+      ></input>
+      <button onClick={catchPokemon}>Catch Pokemon</button>
     </div>
   );
 }
